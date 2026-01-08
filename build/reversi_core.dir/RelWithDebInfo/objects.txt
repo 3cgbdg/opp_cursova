@@ -1,0 +1,4 @@
+C:/Users/User/Desktop/cursor-oop/build/reversi_core.dir/RelWithDebInfo/Board.obj
+C:/Users/User/Desktop/cursor-oop/build/reversi_core.dir/RelWithDebInfo/AI.obj
+C:/Users/User/Desktop/cursor-oop/build/reversi_core.dir/RelWithDebInfo/Game.obj
+C:/Users/User/Desktop/cursor-oop/build/reversi_core.dir/RelWithDebInfo/api.obj

@@ -1,0 +1,4 @@
+C:/Users/User/Desktop/cursor-oop/build/reversi_core.dir/Debug/Board.obj
+C:/Users/User/Desktop/cursor-oop/build/reversi_core.dir/Debug/AI.obj
+C:/Users/User/Desktop/cursor-oop/build/reversi_core.dir/Debug/Game.obj
+C:/Users/User/Desktop/cursor-oop/build/reversi_core.dir/Debug/api.obj

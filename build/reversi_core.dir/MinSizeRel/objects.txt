@@ -1,0 +1,4 @@
+C:/Users/User/Desktop/cursor-oop/build/reversi_core.dir/MinSizeRel/Board.obj
+C:/Users/User/Desktop/cursor-oop/build/reversi_core.dir/MinSizeRel/AI.obj
+C:/Users/User/Desktop/cursor-oop/build/reversi_core.dir/MinSizeRel/Game.obj
+C:/Users/User/Desktop/cursor-oop/build/reversi_core.dir/MinSizeRel/api.obj

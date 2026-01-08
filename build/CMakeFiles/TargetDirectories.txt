@@ -1,0 +1,3 @@
+C:/Users/User/Desktop/cursor-oop/build/CMakeFiles/reversi_core.dir
+C:/Users/User/Desktop/cursor-oop/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/User/Desktop/cursor-oop/build/CMakeFiles/ZERO_CHECK.dir
