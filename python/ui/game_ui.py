@@ -58,7 +58,7 @@ class GameUI:
             return
         
         import os
-        # Search for Rocky Balboa music for the game
+        # Search for music files
         possible_names = [
             "gonna_fly_now.mp3",
             "rocky_theme.mp3",
@@ -110,7 +110,7 @@ class GameUI:
                     self._draw(thinking=True)
                     pygame.display.flip()
                     
-                    # Execute move (blocking call)
+                    # Execute move
                     r, c = self.core.get_best_move(self.difficulty)
                     if r != -1 and c != -1:
                         self._apply_move(r, c)
@@ -205,7 +205,7 @@ class GameUI:
         self.last_eval_time = time.time()
     
     def _check_and_auto_pass(self):
-        """Automatically passes the turn if the current player has no valid moves"""
+        """Passes the turn if the current player has no valid moves"""
         # Clear cache to check current state
         self.game_over_cached = None
         

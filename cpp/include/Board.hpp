@@ -28,7 +28,7 @@ public:
     bool isValidMove(Player player, int row, int col) const;
     bool applyMove(Player player, int row, int col);
 
-    std::pair<int, int> getScore() const; // {black, white}
+    std::pair<int, int> getScore() const;
     bool hasAnyValidMove(Player player) const;
 
     const std::array<Cell, kSize * kSize>& data() const { return cells; }

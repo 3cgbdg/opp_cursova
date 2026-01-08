@@ -87,9 +87,6 @@ def draw_hud(surface: pygame.Surface, text_font: pygame.font.Font, size: Tuple[i
     surface.blit(s, (margin, size[1] - margin - 24))
 
 
-# Removed unused animations as per user request (Cheerleader, Cossack).
-
-
 
 def draw_trophy(surface: pygame.Surface, center: Tuple[int, int], color=(255, 215, 0)):
     import pygame as pg
@@ -113,17 +110,14 @@ def draw_trophy(surface: pygame.Surface, center: Tuple[int, int], color=(255, 21
     pg.draw.rect(surface, (255, 240, 180), plaque_rect, border_radius=4)
 
 
-# Removed draw_winning_team_flag as it's not used.
-
-
 
 def draw_statistics(surface: pygame.Surface, size_px: int, font: pygame.font.Font, 
                    black_score: int, white_score: int, result: int):
-    """Draws game statistics - an interesting feature to impress the grader"""
+    """Draws game statistics"""
     stats_y = size_px - 120
     stats_x = 30
     
-    # Фон для статистики
+    # Background for statistics
     stats_bg = pygame.Rect(stats_x - 10, stats_y - 10, 300, 100)
     overlay = pygame.Surface((stats_bg.width, stats_bg.height), pygame.SRCALPHA)
     overlay.fill((0, 0, 0, 180))

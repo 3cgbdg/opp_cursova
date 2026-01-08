@@ -23,7 +23,7 @@ void Game::passTurn() {
 GameResult Game::result() const {
     bool blackHas = board.hasAnyValidMove(Player::Black);
     bool whiteHas = board.hasAnyValidMove(Player::White);
-    // Гра закінчується тільки коли обидва гравці не мають ходів
+    // Game ends only when both players have no moves
     if (blackHas || whiteHas) return GameResult::Ongoing;
     auto [b, w] = board.getScore();
     if (b > w) return GameResult::BlackWins;

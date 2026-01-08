@@ -9,10 +9,8 @@ class ReversiCore:
         dll_candidates = []
         if dll_path:
             dll_candidates.append(dll_path)
-        # Next to this file
         dll_dir = os.path.dirname(os.path.abspath(__file__))
         dll_candidates.append(os.path.join(dll_dir, "reversi_core.dll"))
-        # Common build outputs
         project_root = os.path.abspath(os.path.join(dll_dir, os.pardir))
         dll_candidates.append(os.path.join(project_root, "build", "Release", "reversi_core.dll"))
         dll_candidates.append(os.path.join(project_root, "build", "reversi_core.dll"))
@@ -107,7 +105,7 @@ class ReversiCore:
         return int(self.lib.current_player(self.handle))
 
     def valid_moves(self):
-        temp = (c_int * 60)()  # max possible moves < 60
+        temp = (c_int * 60)()
         count = self.lib.get_valid_moves(self.handle, temp, 60)
         moves = []
         for i in range(count):

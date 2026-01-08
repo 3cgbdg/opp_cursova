@@ -28,10 +28,9 @@ Move AI::getBestMove(const Board& board, Player player, int depth) {
     int beta = std::numeric_limits<int>::max();
 
     for (const auto& move : moves) {
-        Board nextBoard = board; // Copy
+        Board nextBoard = board;
         nextBoard.applyMove(player, move.row, move.col);
         
-        // Pass the turn to the opponent for the next recursive step
         Player opponent = (player == Player::Black) ? Player::White : Player::Black;
         
         int score = minimax(nextBoard, depth - 1, alpha, beta, player, opponent);
@@ -59,9 +58,7 @@ int AI::minimax(Board board, int depth, int alpha, int beta, Player maximizingPl
     // Handle pass case
     if (moves.empty()) {
         Player opponent = (currentPlayer == Player::Black) ? Player::White : Player::Black;
-        // Check if game over (opponent also has no moves)
         if (!board.hasAnyValidMove(opponent)) {
-            // Game over, return exact score difference heavily weighted
             auto [b, w] = board.getScore();
             int diff = (maximizingPlayer == Player::Black) ? (b - w) : (w - b);
             // Multiply by 1000 to prioritize winning over heuristic
@@ -69,7 +66,6 @@ int AI::minimax(Board board, int depth, int alpha, int beta, Player maximizingPl
             if (diff < 0) return -10000 + diff;
             return 0;
         }
-        // Pass turn
         return minimax(board, depth, alpha, beta, maximizingPlayer, opponent);
     }
 
