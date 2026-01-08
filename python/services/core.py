@@ -11,6 +11,7 @@ class ReversiCore:
         if dll_path:
             dll_candidates.append(dll_path)
         dll_dir = os.path.dirname(os.path.abspath(__file__))
+        python_dir = os.path.dirname(dll_dir)
         dll_candidates.append(os.path.join(python_dir, "reversi_core.dll"))
         project_root = os.path.abspath(os.path.join(python_dir, os.pardir))
         dll_candidates.append(os.path.join(project_root, "build", "Release", "reversi_core.dll"))
